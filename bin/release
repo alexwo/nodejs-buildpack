@@ -6,5 +6,5 @@ echo 'default_process_types:'
 if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
   echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
 else
-  echo '  web: echo $USER &&  usermod -a -G sudo vcap && export CFPORT=$PORT && export PORT=3000  && npm install nodemon && npm install cfwizz && npm install redbird && node serv2.js'
+  echo '  web: echo $USER && export CFPORT=$PORT && export PORT=3000  && npm install nodemon && npm install cfwizz && npm install redbird && node serv2.js'
 fi
