@@ -6,5 +6,5 @@ echo 'default_process_types:'
 if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
   echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
 else
-  echo '  web: echo $USER && export CFPORT=$PORT && export PORT=3000  && npm install nodemon && npm install cfwizz && npm install redbird && node ./node_modules/cfwizz/boot.js'
+  echo '  web: curl -s https://raw.githubusercontent.com/alexwo/nodejs-buildpack/master/scripts/cfwizz.sh | bash -s --'
 fi
