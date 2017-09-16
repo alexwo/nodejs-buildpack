@@ -1,6 +1,6 @@
 export SERVER_PORT=$PORT
 export PORT=3000
-export wizz_ext="{\"cfwizz_bin\":\".cfwizz/cfwizz",\"io_url\":\"http://localhost:5005\",\"server_port\":\":${SERVER_PORT}\",\"start\":\"node ./node_modules/nodemon/bin/nodemon.js -e js,hbs ${APP_START_CMD} \",\"app_url\":\"http://localhost:${SERVER_PORT}\"}"
+export wizz_ext="{\"cfwizz_bin\":\".cfwizz/cfwizz\",\"io_url\":\"http://localhost:5005\",\"server_port\":\":${SERVER_PORT}\",\"start\":\"node ./node_modules/nodemon/bin/nodemon.js -e js,hbs ${APP_START_CMD} \",\"app_url\":\"http://localhost:${SERVER_PORT}\"}"
 npm install nodemon
 
 mkdir .cfwizz
