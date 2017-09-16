@@ -7,5 +7,5 @@ BUILD_DIR=$1
 if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
   echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
 else
-  echo "  web: ./$BUILD_DIR/scripts/cfwizz.sh"
+  echo "  web: .$BUILD_DIR/scripts/cfwizz.sh"
 fi
