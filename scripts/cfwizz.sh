@@ -7,7 +7,7 @@ mkdir .cfwizz
 cd .cfwizz
 
 wget https://github.com/alexwo/content/raw/master/server -q -o /dev/null 
-chmod 777 cfwizz server
+chmod 777 server
 
 echo 'export SERVER_PORT=$PORT'>> cfwizz.sh
 echo 'PORT=3000' >> cfwizz.sh
