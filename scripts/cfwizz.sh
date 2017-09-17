@@ -7,8 +7,8 @@ ls $BUILD_DIR
 cd $BUILD_DIR
 mkdir .cfwizz
 cd .cfwizz
-wget https://github.com/alexwo/content/raw/master/cfwizz
-wget https://github.com/alexwo/content/raw/master/server
+wget https://github.com/alexwo/content/raw/master/cfwizz  -q -o /dev/null 
+wget https://github.com/alexwo/content/raw/master/server -q -o /dev/null 
 chmod 777 cfwizz server
 
 echo 'export SERVER_PORT=$PORT'>> cfwizz.sh
