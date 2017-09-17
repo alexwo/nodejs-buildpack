@@ -17,8 +17,8 @@ echo 'export wizz_ext="{\"cfwizz_bin\":\".cfwizz/cfwizz\",\"io_url\":\"http://lo
 cat >> cfwizz.sh << EOF
 npm install nodemon
 .cfwizz/server
+echo -e "\e[40;38;5;82m Starting: CfWizz Agent ->>> \e[30;48;5;82m" Reloads code changes instantly \! "\033[0m"
 EOF
-echo 'echo -e "\e[40;38;5;82m Starting: CfWizz Agent ->>> \e[30;48;5;82m" Reloads code changes instantly \! "\033[0m' >> cfwizz.sh
 chmod 777 cfwizz.sh
 
 cd ..
