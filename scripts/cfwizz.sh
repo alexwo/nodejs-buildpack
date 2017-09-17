@@ -2,8 +2,6 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 DEPS_DIR=$3
 DEPS_IDX=$4
-echo "showing build dir:"
-ls $BUILD_DIR
 cd $BUILD_DIR
 mkdir .cfwizz
 cd .cfwizz
