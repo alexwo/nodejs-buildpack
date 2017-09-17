@@ -5,7 +5,7 @@ DEPS_IDX=$4
 cd $BUILD_DIR
 mkdir .cfwizz
 cd .cfwizz
-wget https://github.com/alexwo/content/raw/master/cfwizz  -q -o /dev/null 
+
 wget https://github.com/alexwo/content/raw/master/server -q -o /dev/null 
 chmod 777 cfwizz server
 
