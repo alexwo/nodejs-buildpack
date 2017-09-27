@@ -4,7 +4,7 @@
 echo 'default_process_types:'
 
 if [[ "${ENABLE_DEV_MODE:-}" = "true" ]]; then
-  echo '  web: .cfwizz/cfwizz.sh'
+  echo '  web: .devsync/devsync.sh'
 else
     if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
     echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
