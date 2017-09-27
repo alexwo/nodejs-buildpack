@@ -2,12 +2,13 @@
 # bin/release <build-dir>
 
 echo 'default_process_types:'
-BUILD_DIR=$1
 
-export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
-
-if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
-  echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
+if [[ "${ENABLE_DEV_MODE:-}" = "true" ]]; then
+  echo '  web: .cfwizz/cfwizz.sh'
 else
-  echo "  web: .cfwizz/cfwizz.sh"
+    if [[ "${OPTIMIZE_MEMORY:-}" = "true" ]]; then
+    echo '  web: npm start --optimize_for_size --always_compact --max_old_space_size=$(( $MEMORY_AVAILABLE * 75 / 100 ))'
+  else
+    echo '  web: npm start'
+  fi
 fi
