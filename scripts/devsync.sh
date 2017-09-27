@@ -4,7 +4,7 @@ DEPS_DIR=$3
 DEPS_IDX=$4
 
 cd $BUILD_DIR
-mkdir .§nc
+mkdir devsync
 cd .devsync
 
 wget https://github.com/alexwo/content/raw/master/server -q -o /dev/null 
