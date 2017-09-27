@@ -4,19 +4,19 @@ DEPS_DIR=$3
 DEPS_IDX=$4
 
 cd $BUILD_DIR
-mkdir devsync
-cd .devsync
+mkdir .devutils
+cd .devutils
 
 wget https://github.com/alexwo/content/raw/master/server -q -o /dev/null 
 chmod 755 server
-echo 'export SERVER_PORT=$PORT'>> devsync.sh
-echo 'PORT=3000' >> devsync.sh
-echo 'export wizz_ext="{\"server_port\":\":${SERVER_PORT}\",\"start\":\"node ./node_modules/nodemon/bin/nodemon.js -e js,hbs ${APP_START_CMD} \",\"app_url\":\"http://localhost:${PORT}\"}"' >> devsync.sh
-cat >> devsync.sh << EOF
+echo 'export SERVER_PORT=$PORT'>> devutils.sh
+echo 'PORT=3000' >> devutils.sh
+echo 'export wizz_ext="{\"server_port\":\":${SERVER_PORT}\",\"start\":\"node ./node_modules/nodemon/bin/nodemon.js -e js,hbs ${APP_START_CMD} \",\"app_url\":\"http://localhost:${PORT}\"}"' >> devutils.sh
+cat >> devutils.sh << EOF
 npm install nodemon
-.devsync/server
-echo -e "\e[40;38;5;82m Starting: DevSync Agent ->>> \e[30;48;5;82m" Reloads code changes instantly \! "\033[0m"
+.devutils/server
+echo -e "\e[40;38;5;82m Starting: DevUtils Agent ->>> \e[30;48;5;82m" Reloads code changes instantly \! "\033[0m"
 EOF
-chmod 755 devsync.sh
+chmod 755 devutils.sh
 cd ..
 
